@@ -3,6 +3,6 @@
 
 <template>
   <section>
-    <h1>WeMood</h1>
+    <h1>Suchergebnisse</h1>
   </section>
 </template>
