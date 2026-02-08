@@ -34,33 +34,33 @@ const close = () => {
           </p>
 
           <div class="emg-actions">
-
-            class="emg-cta"
-            :href="EMERGENCY_CONFIG.primary.href"
-            rel="noopener"
+            <a
+                class="emg-cta"
+                :href="EMERGENCY_CONFIG.primary.href"
+                rel="noopener"
             >
-            {{ EMERGENCY_CONFIG.primary.label }}
+              {{ EMERGENCY_CONFIG.primary.label }}
             </a>
-
-            class="emg-cta-outline"
-            :href="EMERGENCY_CONFIG.alt.href"
-            rel="noopener"
+            <a
+                class="emg-cta-outline"
+                :href="EMERGENCY_CONFIG.alt.href"
+                rel="noopener"
             >
-            {{ EMERGENCY_CONFIG.alt.label }}
+              {{ EMERGENCY_CONFIG.alt.label }}
             </a>
-
-            class="emg-link"
-            :href="EMERGENCY_CONFIG.chat.href"
-            target="_blank"
-            rel="noopener"
+            <a
+                class="emg-link"
+                :href="EMERGENCY_CONFIG.chat.href"
+                target="_blank"
+                rel="noopener"
             >
-            {{ EMERGENCY_CONFIG.chat.label }}
+              {{ EMERGENCY_CONFIG.chat.label }}
             </a>
-
-            class="emg-link"
-            :href="`mailto:${EMERGENCY_CONFIG.mail}`"
+            <a
+                class="emg-link"
+                :href="`mailto:${EMERGENCY_CONFIG.mail}`"
             >
-            E-Mail Support
+              E-Mail Support
             </a>
           </div>
 
@@ -81,3 +81,7 @@ const close = () => {
     </div>
   </Teleport>
 </template>
+
+<style scoped>
+/* Styles are in main.css */
+</style>
