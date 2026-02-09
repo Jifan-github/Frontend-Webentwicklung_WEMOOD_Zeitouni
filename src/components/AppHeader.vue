@@ -44,8 +44,8 @@ onUnmounted(() => {
 
 <template>
   <header class="glass-header">
-    <nav>
-      <router-link to="/" class="logo">WeMood</router-link>
+    <nav class="p-4 md:p-5 lg:px-10 xl:px-15">
+      <router-link to="/" class="logo md:text-2xl lg:text-3xl">WeMood</router-link>
 
       <button
           class="burger-menu"
@@ -58,7 +58,7 @@ onUnmounted(() => {
           <span class="burger-line"></span>
           <span class="burger-line"></span>
         </template>
-        <svg v-else class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg v-else class="close-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>

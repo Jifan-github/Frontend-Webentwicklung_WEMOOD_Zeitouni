@@ -61,7 +61,7 @@ provide('openEmergency', openEmergency)
     <AppHeader />
 
     <button
-        class="emergency-btn"
+        class="emergency-btn right-2.5 bottom-2.5 p-2.5 text-sm sm:right-3 sm:bottom-3 sm:px-3 sm:py-2.5 sm:text-[0.85rem] md:right-4 md:bottom-4 md:px-[14px] md:py-3 md:text-[0.9rem] lg:right-5 lg:bottom-5 lg:px-[18px] lg:py-3.5 lg:text-[0.95rem]"
         @click="openEmergency"
         aria-haspopup="dialog"
     >

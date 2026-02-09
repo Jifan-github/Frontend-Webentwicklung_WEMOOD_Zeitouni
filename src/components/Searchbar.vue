@@ -58,15 +58,16 @@ defineExpose({
 
 <template>
   <div class="search-container">
-    <form class="search-bar" @submit.prevent="handleSubmit">
+    <form class="search-bar flex-col md:flex-row p-4 md:p-5" @submit.prevent="handleSubmit">
       <input
           type="text"
           v-model="searchTerm"
           :placeholder="placeholder"
           autocomplete="off"
+          class="w-full text-center md:text-left"
           @input="handleInput"
       />
-      <button v-if="navigateOnSubmit" type="submit">Suchen</button>
+      <button v-if="navigateOnSubmit" type="submit" class="w-full md:w-auto mt-2.5 md:mt-0">Suchen</button>
     </form>
 
     <div v-if="showSuggestions" class="search-suggestions">

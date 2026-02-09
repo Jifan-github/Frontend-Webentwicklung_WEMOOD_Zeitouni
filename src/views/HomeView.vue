@@ -5,7 +5,7 @@ import RotatingText from '../components/RotatingText.vue'
 
 <template>
   <section class="fullscreen-section snap-section home-section">
-    <h1 class="main-title">
+    <h1 class="main-title text-[2.5rem] sm:text-[3.5rem] lg:text-[5rem] xl:text-[7rem]">
       <span class="title-static">We</span>
       <RotatingText
           :texts="['Mood', 'Care', 'Help', 'Heal']"
@@ -42,19 +42,19 @@ import RotatingText from '../components/RotatingText.vue'
 
 .title-rotating {
   display: inline-flex;
-  min-width: 200px;
+  min-width: 100px;
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .title-rotating {
     min-width: 140px;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
   .title-rotating {
-    min-width: 100px;
+    min-width: 200px;
   }
 }
 </style>

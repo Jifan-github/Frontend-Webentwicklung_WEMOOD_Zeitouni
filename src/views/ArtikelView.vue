@@ -10,7 +10,6 @@ const route = useRoute()
 const searchTerm = ref('')
 const selectedArtikelId = ref(null)
 
-// Filter articles by category
 const filteredArtikel = computed(() => {
   const term = searchTerm.value.toLowerCase().trim()
   if (!term) return artikelDatenbank
@@ -38,7 +37,6 @@ const closeArtikel = () => {
   document.body.style.overflow = ''
 }
 
-// Check URL params on mount
 onMounted(() => {
   const searchParam = route.query.search
   if (searchParam) {
@@ -46,7 +44,6 @@ onMounted(() => {
   }
 })
 
-// Watch for route changes
 watch(() => route.query.search, (newSearch) => {
   if (newSearch) {
     searchTerm.value = newSearch
@@ -55,9 +52,9 @@ watch(() => route.query.search, (newSearch) => {
 </script>
 
 <template>
-  <section class="artikel-section">
+  <section class="artikel-section px-5 pt-[100px] pb-10 md:px-8 lg:px-12">
     <div class="artikel-header">
-      <h1 class="section-title">Alle Artikel</h1>
+      <h1 class="section-title text-[1.8rem] sm:text-[2rem] lg:text-[2.5rem]">Alle Artikel</h1>
       <SearchBar
           placeholder="Suche nach Emotionen..."
           :navigate-on-submit="false"
@@ -67,7 +64,7 @@ watch(() => route.query.search, (newSearch) => {
       />
     </div>
 
-    <div class="artikel-grid">
+    <div class="artikel-grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
       <ArtikelCard
           v-for="artikel in filteredArtikel"
           :key="artikel.id"
